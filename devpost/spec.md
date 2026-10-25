@@ -129,4 +129,11 @@ Before shipping: verify actual run commands and public links, perform participan
 
 ## Implementation Corrections
 
+## Sharing Record — 2026-10-25
+
+- Public source repository: https://github.com/Chris20060615/benefit-evidence-card . The original reviewed local history through `dc62fd91c7d1f5a70a25c3e023ed2faf734ae680` was pushed to `main` without rewriting it. This sharing-record change is a subsequent technical documentation commit.
+- Public demo: https://www.youtube.com/watch?v=MsjHcjwhIPM . YouTube Studio confirmed publication on 2026-10-25 and displays a 0:32 duration; the local source recording is 31.1 seconds. Its title comes from the technical filename and it has no participant narration.
+- An independent signed-out browser could read the video title but encountered YouTube's anti-bot sign-in wall before media playback. Do not claim signed-out playback was verified; a manual private-window playback check remains useful.
+- Public sharing was explicitly authorized. Participant plan/prototype review, genuine learning activity, entrant-written submission fields, eligibility/team confirmation and formal Devpost submission remain separate and incomplete. Publishing these technical assets is not a claim of submission or participant-authored work.
+
 - 2026-10-25: Aligned this draft with actual port 8768, ignored in-project `.cache/` storage, source loading in `server.py`, parsing/rules in `evidence.py`, three evidence statuses and HTTP 503 source failures. Replaced the earlier proposed ranking description with the implemented source-capability rules. These are factual technical corrections, not participant approval or completed learning.

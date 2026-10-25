@@ -261,7 +261,7 @@ def _unsupported_claim(question: str) -> tuple[str, str | None] | None:
     """Reject unsupported conclusions even if procedural keywords also match."""
     if _matches(r"(?:确认|核实|确定|证明|判断|看出|查明|认定|验证).{0,18}(?:我|本人|个人).{0,8}(?:资格|符合|适用|待遇)|(?:我|本人|个人).{0,12}(?:资格|待遇|适用).{0,12}(?:确认|核实|确定|证明|判断|验证)|(?:confirm|prove|verify|determine|establish|validate).{0,30}(?:my|personal|individual).{0,20}(?:eligibility|qualif|entitlement)", question):
         return ("A lookup method cannot confirm individual eligibility or entitlement. This source does not perform the personal qualification check requested by the question.", "listed_groups")
-    if _matches(r"报销.{0,12}(?:比例|百分|多少|几成|金额|额度|[一二三四五六七八九十\d]+成)|百分之|报销率|\d+\s*(?:%|％|percent)|reimbursement.{0,15}(?:rate|percentage|amount)|(?:how much|what percentage).{0,25}(?:reimburs|paid|cover)|多少钱|收费|免费", question):
+    if _matches(r"报销.{0,12}(?:比例|百分|多少|几成|金额|额度|[一二三四五六七八九十\d]+成)|百分之|报销率|\d+\s*(?:%|％|percent)|reimbursement.{0,15}(?:rate|percentage|amount)|(?:how much|what percentage).{0,80}(?:reimburs|paid|cover)|多少钱|收费|免费", question):
         return ("This guide does not establish a personal reimbursement amount, rate, or charge. A related passage is not a calculation basis.", None)
     if _matches(r"代办|代申请|代替|代理|(?:帮|替|代).{0,8}(?:父母|父亲|母亲|爸爸|妈妈|家人|孩子|妻子|丈夫|爷爷|奶奶).{0,8}(?:办|申请)|proxy|on behalf|for my (?:parents?|mother|father|child|daughter|son|wife|husband|grandparents?|grandmother|grandfather|family)", question):
         return ("This guide does not specify proxy authorization or the documents required to file for another person.", "materials_process")
@@ -328,7 +328,7 @@ def search_document(document: dict[str, Any] | None, question: str) -> dict[str,
         return result
     # Reject additional unanswered requests rather than letting one recognized
     # procedural clause make a compound question look fully supported.
-    clauses = re.split(r"[，,；;。!?？！\n]|另外|顺便|并且|同时还|\band\b|\balso\b", question_text, flags=re.IGNORECASE)
+    clauses = [clause.strip() for clause in re.split(r"[，,；;。!?？！\n]|另外|顺便|并且|同时还|\band\b|\balso\b", question_text, flags=re.IGNORECASE) if clause.strip()]
     if len(clauses) > 1:
         for clause in clauses:
             clause = clause.strip()

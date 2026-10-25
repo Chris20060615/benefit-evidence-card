@@ -285,6 +285,15 @@ class EvidenceTests(unittest.TestCase):
                 self.assertEqual(result["evidence"], [])
         self.assertEqual(search_document(None, "备案进度怎么查？")["status"], "insufficient")
 
+    def test_single_question_explanations_do_not_claim_an_extra_request(self):
+        rate = search_document(self.document, "What percentage of my hospital bill will be reimbursed?")
+        self.assertEqual(rate['status'], 'insufficient')
+        self.assertIn('reimbursement', rate['reason'])
+        self.assertNotIn('additional request', rate['reason'])
+        unknown = search_document(self.document, "Where can I find the weather forecast?")
+        self.assertEqual(unknown['status'], 'insufficient')
+        self.assertNotIn('additional request', unknown['reason'])
+
     @unittest.skipUnless(os.environ.get("EVIDENCE_TEST_SNAPSHOT"), "Internal source snapshot was not supplied.")
     def test_optional_internal_official_snapshot(self):
         document = parse_document(Path(os.environ["EVIDENCE_TEST_SNAPSHOT"]).read_text(encoding="utf-8"))

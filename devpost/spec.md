@@ -54,7 +54,7 @@ Runtime must not read `sources/reference-cases.json`, expected labels, case iden
 
 ### Local HTTP API
 
-Serve only `/`, `/styles.css`, `/app.js`, `GET /api/health`, `GET /api/source` and `POST /api/search`. Other paths, including traversal and internal-file attempts, return 404. Restrict Host and any supplied Origin to the loopback server address. JSON requests are limited to 16,384 bytes and trimmed questions to 500 characters.
+Serve only `/`, `/styles.css`, `/app.js`, `/favicon.svg`, `GET /api/health`, `GET /api/source` and `POST /api/search`. Other paths, including traversal and internal-file attempts, return 404. Restrict Host and any supplied Origin to the loopback server address. JSON requests are limited to 16,384 bytes and trimmed questions to 500 characters.
 
 `GET /api/health` returns HTTP 200 with `server: ready` and `source_ready`. `GET /api/source` returns HTTP 200 with `status: ready`, source metadata and capabilities, or HTTP 503 with `status: source_unavailable`. Valid `POST /api/search` requests return HTTP 200 for all three evidence outcomes; an unavailable source returns HTTP 503. Invalid payload/empty/long question returns 400, invalid request size returns 413, wrong content type returns 415, and untrusted Host/Origin returns 403. Unexpected processing failures return 500 with no inferred evidence. Implements `prd.md > Question Input` and `prd.md > Source and Request Errors`.
 

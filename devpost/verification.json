@@ -2,8 +2,8 @@
   "checked_on": "2026-10-25",
   "automated_suite": {
     "command": "python -X utf8 -m unittest discover -s tests -v",
-    "total": 33,
-    "passed": 33,
+    "total": 34,
+    "passed": 34,
     "skipped": 0,
     "real_source_snapshot_used": true,
     "note": "Optional real-source test requires EVIDENCE_TEST_SNAPSHOT; without a local snapshot it is skipped."
@@ -73,7 +73,14 @@
       "horizontalOverflow": false
     },
     "browserErrors": [],
-    "scope": "Mechanical browser checks by AI; not participant trial or general accuracy."
+    "scope": "Mechanical browser checks by AI; not participant trial or general accuracy.",
+    "single_question_reason_smoke": "Personal reimbursement question shows specific insufficient-evidence explanation, without falsely claiming an additional request.",
+    "live_source_link": {
+      "click_opened_official_article": true,
+      "article_contains_exact_quote": true,
+      "scroll_y_observed": 5745,
+      "highlight_appearance": "not asserted"
+    }
   },
   "review_fixes": [
     "Unsupported record deletion, undertaking withdrawal, locality-specific claims and personal eligibility conclusions now abstain; positive procedural facets are bounded.",
@@ -86,5 +93,13 @@
     "The current guide is dated 2025-03-16; retrieval does not verify current personal benefits."
   ],
   "participant_trial": false,
-  "formal_submission": false
+  "formal_submission": false,
+  "app_map": {
+    "static_local_paths_and_symbols_checked": true,
+    "browser_rendered": true,
+    "method": "single-file loopback preview of the unchanged standalone HTML; file-protocol navigation was blocked by browser tooling",
+    "console": "temporary preview favicon request 404 only; no map scripts or external assets",
+    "participant_tour": false,
+    "source_code_commit": "d90495b8bd6f4ffbb1c9e3bf5d117b6905e03bf8"
+  }
 }

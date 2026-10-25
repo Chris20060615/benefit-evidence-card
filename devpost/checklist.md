@@ -10,7 +10,7 @@ human_plan_review: pending
 
 Build mode: fast execution under the user's direct delegation. This is an agent-selected execution setting responding to the request for autonomous progress, not a completed learner mode-selection interview. Implementation may proceed while plan status remains draft. Check boxes below require actual evidence; planned work is not completed work.
 
-Verification record: the post-review 2026-10-25 build session recorded 33 passing automated tests, including the optional internal official-source snapshot. This is a development test count, not a retrieval accuracy score or participant review. Actual Edge browser checks also passed; see `verification.json`. Only corresponding implementation and automated-check subitems are marked below. Whole slices remain open while participant requirements remain incomplete.
+Verification record: the post-review 2026-10-25 build session recorded 34 passing automated tests, including the optional internal official-source snapshot. This is a development test count, not a retrieval accuracy score or participant review. Actual Edge browser checks also passed; see `verification.json`. Only corresponding implementation and automated-check subitems are marked below. Whole slices remain open while participant requirements remain incomplete.
 
 ## Slices
 
@@ -24,7 +24,7 @@ Verification record: the post-review 2026-10-25 build session recorded 33 passin
   - [x] Verify (automated): Parser/paragraph and provenance checks, cached-source identity/integrity checks, absent/invalid cache and HTTP unavailable-source tests passed in the recorded suite.
   - [x] Verify (browser/run): Started port 8768 in a separate process using verified cache. Edge displayed the exact original quote, title, date, section and official link. Optional source highlighting is a browser convenience, not a required correctness claim.
   Learner check: Pending participant trial: open the page, locate progress-viewing evidence and compare the passage with the official source. Agent verification does not complete this check.
-  Commit: `Add local source-backed evidence journey` after checks pass and local commit identity is available; record a specific impediment if committing is unavailable.
+  Local checkpoint: `679a2a1` (AI-agent identity, not participant attribution).
 
 - [ ] **2. Unsupported conclusions abstain and conditions stay visible**
   Becomes usable: The same form handles the small supported topic set while clearly refusing unsupported personal, nationwide, guaranteed-timing and out-of-domain conclusions; conditional passages retain their source limits.
@@ -36,7 +36,7 @@ Verification record: the post-review 2026-10-25 build session recorded 33 passin
   - [x] Verify (automated): Supported/conditional topics, personal rate and amount, universal claims, timing/approval guarantees, proxy/document checklists, unknown questions, English/Chinese paraphrases and mixed requests passed the recorded suite. Source-capability checks also reject matching words in unsupported section context.
   - [x] Verify (browser): Edge displayed conditional limits and related-passage labels; example and typed queries returned identical JSON. Review regression questions abstained. Participant trials remain separate.
   Learner check: Pending participant trial: try a supported question and a claim the guide cannot establish; report any misleading or missing condition. Continue independent implementation meanwhile.
-  Commit: `Separate document evidence from unsupported conclusions` after checks pass.
+  Local checkpoints: `679a2a1` implements the bounded rules; `d90495b` clarifies single-question abstention reasons.
 
 - [ ] **3. A reviewer can run, inspect and demonstrate the prototype**
   Becomes usable: A clean one-page English interface is runnable from exact instructions, handles failures, keeps sensitive/internal files inaccessible, and supports the short demonstration journey.
@@ -48,7 +48,7 @@ Verification record: the post-review 2026-10-25 build session recorded 33 passin
   - [x] Verify (automated): Blank/long/malformed questions, request byte limits, wrong content type, missing source, internal-file/traversal routes and untrusted Host/Origin requests passed the recorded suite. Parser checks include inline text and hidden content handling.
   - [x] Verify (browser/run): Edge checked 390px mobile layout without horizontal overflow, Enter/Shift+Enter, empty input, safe HTML-like input and delayed-request controls/query echo. No browser errors. Source-unavailable behavior is covered by API tests; no real participant trial is claimed.
   Learner check: Pending final participant exploration: run the documented steps, try awkward inputs, identify needed revisions, and state whether the prototype is ready for shipping preparation.
-  Commit: `Document and verify the local demonstration` after checks pass.
+  Local checkpoint: `679a2a1`; final technical records are saved in the following documentation commit.
 
 ## Hands-on Checkpoints
 
@@ -76,7 +76,7 @@ Activity mode: to be recorded from actual interaction.
 
 ## Shipping Preparation Remaining
 
-- [ ] Review intended public files and history for private context, credentials, unrelated content and complete source-page redistribution.
+- [x] Review intended public files: independent audit of 42 tracked candidates found no private profile, names/accounts, credentials, absolute personal paths, full cache, recordings or unrelated files. The initial history uses only transparent AI-agent commits. No public publishing has occurred.
 - [ ] Prepare a runnable public repository and verify its unauthenticated link once publishing is authorized.
 - [ ] Participant supplies the official project name, description, form responses and exit-survey reflection; agent correction is limited to spelling/grammar under the toolkit.
 - [ ] Participant supplies narration; record a working demo shorter than three minutes and verify its public video link.
@@ -89,4 +89,6 @@ Activity mode: to be recorded from actual interaction.
 - Local checkpoints use a transparent AI-agent commit identity; they do not credit participants with unverified work. Public repository/video links and formal submission remain pending.
 
 
-- 2026-10-25 post-review: fixed unsupported action/location/eligibility claims, invalid cache metadata structures, and request/result mismatch. Reverified 33 automated tests and the actual browser journey. The initial 26-test record is superseded for the current revision.
+- 2026-10-25 post-review: fixed unsupported action/location/eligibility claims, invalid cache metadata structures, and request/result mismatch. Reverified 34 automated tests and the actual browser journey. The initial 26-test record is superseded for the current revision.
+
+- 2026-10-25 final mechanical record: 34 tests passed after clarifying single-question rejection reasons. Actual source-link click opened the official article and its body contained the exact quote; scroll position changed. Highlight appearance is not claimed. A silent technical video was recorded; participant narration and public video link remain pending.

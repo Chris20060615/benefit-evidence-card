@@ -10,7 +10,7 @@ human_plan_review: pending
 
 Build mode: fast execution under the user's direct delegation. This is an agent-selected execution setting responding to the request for autonomous progress, not a completed learner mode-selection interview. Implementation may proceed while plan status remains draft. Check boxes below require actual evidence; planned work is not completed work.
 
-Verification record: the post-review 2026-10-25 build session recorded 34 passing automated tests, including the optional internal official-source snapshot. This is a development test count, not a retrieval accuracy score or participant review. Actual Edge browser checks also passed; see `verification.json`. Only corresponding implementation and automated-check subitems are marked below. Whole slices remain open while participant requirements remain incomplete.
+Verification record: the post-review 2026-10-25 build session recorded 40 passing automated tests, including the optional internal official-source snapshot. This is a development test count, not a retrieval accuracy score or participant review. Actual Edge browser checks also passed; see `verification.json`. Only corresponding implementation and automated-check subitems are marked below. Whole slices remain open while participant requirements remain incomplete.
 
 ## Slices
 
@@ -89,6 +89,8 @@ Activity mode: to be recorded from actual interaction.
 - Local checkpoints use a transparent AI-agent commit identity; they do not credit participants with unverified work. Public repository/video links and formal submission remain pending.
 
 
-- 2026-10-25 post-review: fixed unsupported action/location/eligibility claims, invalid cache metadata structures, and request/result mismatch. Reverified 34 automated tests and the actual browser journey. The initial 26-test record is superseded for the current revision.
+- 2026-10-25 post-review: fixed unsupported action/location/eligibility claims, invalid cache metadata structures, and request/result mismatch. Reverified 40 automated tests and the actual browser journey. The initial 26-test record is superseded for the current revision.
 
 - 2026-10-25 final mechanical record: 34 tests passed after clarifying single-question rejection reasons. Actual source-link click opened the official article and its body contained the exact quote; scroll position changed. Highlight appearance is not claimed. A silent technical video was recorded; participant narration and public video link remain pending.
+
+- 2026-10-25 English-material revision: added two exact-SHA-bound English display translations, independently checked against their actual Chinese passages. Six new tests verify exact binding and independence from evidence decisions. Current suite: 40 tests; actual browser renders marked translations at desktop/mobile widths. This is technical translation work, not entrant-written submission text.

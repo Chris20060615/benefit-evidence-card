@@ -60,6 +60,8 @@ Serve only `/`, `/styles.css`, `/app.js`, `/favicon.svg`, `GET /api/health`, `GE
 
 ### Browser Interface
 
+Two demonstrated passages have AI English display translations in `translations.py`, keyed by the SHA-256 of each exact parsed source passage. Changed or unknown text has no stored translation. These annotations are added to presentation data only and are never read by intent, facet, or support rules. The browser labels the translations as AI-authored and nonofficial and retains the original Chinese quotation. Source title/publisher English display labels are also explanatory translations; original metadata stays intact.
+
 Load provenance and submit typed/example questions to the same endpoint. Render successful API statuses `supported`, `conditional` and `insufficient`; for HTTP 503 `source_unavailable`, display a request/source error without inferring a result. An insufficient response may include a related passage explicitly labeled as not proving the claim. Render source/query text as text, not HTML. Clear stale results during a new request, prevent concurrent submissions, expose loading/errors and show conditions and source details. The official link includes a text-fragment hint; section labels and quoted text remain the fallback if browser highlighting fails. Implements `prd.md > Screens and Layout` and all result-state requirements.
 
 ## Data Model
@@ -77,6 +79,7 @@ Load provenance and submit typed/example questions to the same endpoint. Render 
 project/
   server.py                 # download/cache loader, local HTTP entry point and routes
   evidence.py               # article parser, capability/intent rules and abstention
+  translations.py           # exact-source-bound English presentation annotations
   web/
     index.html              # one English interface
     styles.css              # readable responsive layout
@@ -84,6 +87,7 @@ project/
   tests/
     test_evidence.py        # behavior, source failure and abstention checks
     test_server.py          # request limits and route/file boundaries
+    test_translations.py    # exact binding and evidence-decision independence
   sources/
     catalog.json            # source metadata and short attributed excerpt
     reference-cases.json    # development evaluation only; never a runtime dependency

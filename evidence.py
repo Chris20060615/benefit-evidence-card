@@ -13,6 +13,8 @@ from html.parser import HTMLParser
 import re
 from typing import Any
 
+from translations import lookup_display_translation
+
 
 OFFICIAL_SOURCE_URL = "https://www.nhsa.gov.cn/art/2025/3/16/art_14_16010.html"
 MAX_QUESTION_LENGTH = 500
@@ -153,7 +155,7 @@ def _matches(pattern: str, text: str) -> bool:
     return re.search(pattern, text, re.IGNORECASE) is not None
 
 
-def _passages(document: dict[str, Any], topic: str) -> list[dict[str, str]]:
+def _passages(document: dict[str, Any], topic: str) -> list[dict[str, Any]]:
     schema = _CAPABILITY_SCHEMAS.get(topic)
     if schema is None:
         return []
@@ -167,7 +169,14 @@ def _passages(document: dict[str, Any], topic: str) -> list[dict[str, str]]:
         if not isinstance(section, str) or not isinstance(text, str):
             continue
         if _matches(section_pattern, section) and all(cue in text for cue in required_cues):
-            passages.append({"id": str(paragraph.get("id", "")), "section": section, "text": text})
+            passage: dict[str, Any] = {"id": str(paragraph.get("id", "")), "section": section, "text": text}
+            # An exact-hash display annotation is attached only after the
+            # source capability check. It supplies no topic/support input.
+            annotation = lookup_display_translation(text)
+            if annotation is not None:
+                passage["english_translation"] = annotation["english_translation"]
+                passage["translation_provenance"] = annotation["provenance"]
+            passages.append(passage)
     return passages[:2]
 
 

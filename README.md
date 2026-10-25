@@ -41,7 +41,7 @@ Type a question or select an example; both use the same search endpoint.
 
 Supported topics are limited to entry/authentication, filing settings, uploading materials, the conditional undertaking route, progress lookup, listed query services, and the guide's listed participant groups. An accepted result means that the passage describes that narrow topic. It does not establish personal eligibility, actual application status, approval timing, reimbursement amounts, or a current nationwide policy. Unknown phrasing may return insufficient evidence. The rules are inspectable heuristics, not a general language model or a measured accuracy guarantee.
 
-Evidence cards retain original Chinese wording, section labels, publisher/date and an official link. English explanations are prototype summaries, not official translations. Source links include a browser text-fragment hint; if highlighting or scrolling is unavailable, use the section label and quoted phrase on the official page.
+Evidence cards retain original Chinese wording, section labels, publisher/date and an official link. The two passages shown in the demonstration have marked AI English display translations. Each translation is bound to an exact SHA-256 digest of the actual parsed passage; changed or unknown text receives no stored translation. These display notes do not participate in matching or support decisions and are not official translations. Other passages may remain in Chinese. Source links include a browser text-fragment hint; if highlighting or scrolling is unavailable, use the section label and quoted phrase on the official page.
 
 ## Tests and interfaces
 
@@ -61,6 +61,7 @@ Search responses contain `question`, `status`, `reason`, `evidence`, `source`, a
 
 - `server.py`: fixed-source download/cache validation, loopback server and HTTP boundaries.
 - `evidence.py`: article parsing, source-derived capability checks, intent rules and abstention.
+- `translations.py`: two exact-passage English display annotations, separate from evidence decisions.
 - `web/`: buildless HTML, CSS and JavaScript interface.
 - `tests/`: standard-library automated development tests.
 - `sources/`: attributed metadata and historical preparation experiments; see [sources/README.md](sources/README.md).
@@ -70,4 +71,4 @@ Search responses contain `question`, `status`, `reason`, `evidence`, `source`, a
 The full NHSA article is downloaded only at runtime and is not intended for source-control publication. A public webpage does not by itself establish an open redistribution license. No project code license is asserted over the source article. Keep `.cache/`, credentials and private learning context out of publication, and review staged files and history before publishing; an ignore rule does not remove already tracked material.
 
 
-The post-review check on 2026-10-25 passed 34 automated tests with the optional local source snapshot, plus an actual Edge browser journey at desktop and 390px mobile widths. See [verification.json](devpost/verification.json) for scope and limits and [the code reference](devpost/app-map.html) for the real query path. This is not participant validation. Project code and technical documentation use the [MIT license](LICENSE), subject to the source/toolkit exclusions stated there.
+The post-review check on 2026-10-25 passed 40 automated tests with the optional local source snapshot, plus an actual Edge browser journey at desktop and 390px mobile widths. See [verification.json](devpost/verification.json) for scope and limits and [the code reference](devpost/app-map.html) for the real query path. This is not participant validation. Project code and technical documentation use the [MIT license](LICENSE), subject to the source/toolkit exclusions stated there.

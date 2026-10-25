@@ -20,6 +20,8 @@ h1 span { color:var(--accent); }
 .source-panel { padding-right:27px; border-right:1px solid var(--line); }
 .source-panel .eyebrow { line-height:1.6; }
 .source-panel h2 { font-size:19px; line-height:1.6; margin:0 0 24px; font-weight:600; }
+.source-translation { font-size:12px; color:var(--muted); line-height:1.65; margin:-12px 0 22px; }
+.source-translation span { display:block; font-size:11px; margin-top:7px; }
 .source-details { margin:0 0 24px; font-size:12px; }
 .source-details div { margin-bottom:15px; }
 .source-details dt { color:var(--muted); margin-bottom:4px; font-size:10px; text-transform:uppercase; letter-spacing:1px; }
@@ -55,6 +57,9 @@ textarea::placeholder { color:#7c8881; }
 .evidence-card.related .evidence-kind { color:var(--muted); }
 .evidence-section { font-size:11px; line-height:1.6; color:var(--muted); margin:9px 0 13px; }
 blockquote { margin:0; font-family:"Microsoft YaHei","PingFang SC",sans-serif; font-size:14px; line-height:1.9; overflow-wrap:anywhere; }
+.translation { border-top:1px solid var(--line); margin-top:14px; padding-top:14px; }
+.translation > p { font-size:13px; line-height:1.7; margin:9px 0; }
+.translation > .translation-note { font-size:10px; color:var(--muted); }
 .evidence-source { font-size:10px; color:var(--muted); line-height:1.6; margin:14px 0 7px; }
 .evidence-card a { font-size:11px; }
 .condition-note { font-size:12px; line-height:1.7; color:var(--warning); padding:11px 13px; background:#f2ecdc; border-radius:3px; }

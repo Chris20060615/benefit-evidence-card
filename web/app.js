@@ -81,6 +81,13 @@ function renderResult(data) {
     const quote = node('blockquote', '', passage.text);
     quote.lang = 'zh-CN';
     card.append(quote);
+    if (passage.english_translation) {
+      const translation = node('div', 'translation');
+      translation.append(node('span', 'evidence-kind', 'AI English translation · not official'));
+      translation.append(node('p', '', passage.english_translation));
+      translation.append(node('p', 'translation-note', 'English button names are translations. Check the original Chinese wording above.'));
+      card.append(translation);
+    }
     if (conditional) card.append(node('p', 'condition-note', 'The guide limits this route to some regions and eligible participants who cannot provide recognition materials. An application is not an approval.'));
     card.append(node('p', 'evidence-source', (recordSource.publisher || 'Official guide') + ' · published ' + (recordSource.published_date || 'date unavailable')));
     const link = node('a', '', 'Open original · use the section label if highlighting is unavailable ↗');
@@ -90,7 +97,7 @@ function renderResult(data) {
     card.append(link);
     results.append(card);
   }
-  results.append(node('p', 'boundary-note', 'Scope: this single guide and a small set of procedural topics. English explanations are prototype summaries; the quoted Chinese wording is the source evidence.'));
+  results.append(node('p', 'boundary-note', 'Scope: this single guide and a small set of procedural topics. English explanations and marked translations are AI-authored display notes, not official guidance. The Chinese quotation is the original evidence.'));
 }
 
 async function submitQuestion() {

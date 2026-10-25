@@ -130,9 +130,10 @@ Before shipping: verify actual run commands and public links, perform participan
 ## Sharing Record — 2026-10-25
 
 - Public source repository: https://github.com/Chris20060615/benefit-evidence-card . The original reviewed local history through `dc62fd91c7d1f5a70a25c3e023ed2faf734ae680` was pushed to `main` without rewriting it. This sharing-record change is a subsequent technical documentation commit.
-- Public demo: https://www.youtube.com/watch?v=MsjHcjwhIPM . YouTube Studio confirmed publication on 2026-10-25 and displays a 0:32 duration; the local source recording is 31.1 seconds. Its title comes from the technical filename and it has no participant narration.
-- An independent signed-out browser could read the video title but encountered YouTube's anti-bot sign-in wall before media playback. Do not claim signed-out playback was verified; a manual private-window playback check remains useful.
-- Public sharing was explicitly authorized. Participant plan/prototype review, genuine learning activity, entrant-written submission fields, eligibility/team confirmation and formal Devpost submission remain separate and incomplete. Publishing these technical assets is not a claim of submission or participant-authored work.
+- Current public demo: https://www.youtube.com/watch?v=Pwo0dva7ebs . The actual new recording is 78.80 seconds; YouTube Studio confirmed publication on 2026-10-25 and displays 1:19. It shows source/date, original evidence and marked AI translation, retained conditions, and an insufficient-evidence result. Its title comes from the technical filename and it has no participant narration.
+- The earlier 31.1-second clip at https://www.youtube.com/watch?v=MsjHcjwhIPM remains a historical technical asset. The overview requests 1–3 minutes while the rules say less than three minutes; the new recording satisfies both duration descriptions.
+- An independent signed-out browser could read the new video title but encountered YouTube's anti-bot sign-in wall before media playback. Do not claim signed-out playback was verified; a manual private-window playback check remains useful.
+- Public sharing was explicitly authorized. An online Devpost draft now contains technical links and AI-assisted project copy requested by the participant, explicitly distinguished from participant-original reflections. Personal survey responses, actual team membership, participant review/learning activity, all-rules eligibility and final terms remain separate requirements. Publishing assets or saving a draft is not formal competition submission.
 
 ## Implementation Corrections
 

@@ -76,17 +76,17 @@ Activity mode: to be recorded from actual interaction.
 
 ## Shipping Preparation Remaining
 
-- [x] Review intended public files: independent audit of 42 tracked candidates found no private profile, names/accounts, credentials, absolute personal paths, full cache, recordings or unrelated files. The initial history uses only transparent AI-agent commits. No public publishing has occurred.
-- [ ] Prepare a runnable public repository and verify its unauthenticated link once publishing is authorized.
-- [ ] Participant supplies the official project name, description, form responses and exit-survey reflection; agent correction is limited to spelling/grammar under the toolkit.
-- [ ] Participant supplies narration; record a working demo shorter than three minutes and verify its public video link.
+- [x] Review intended public files: the initial 42-file privacy audit was followed by review of two exact-source translation/test additions, for 44 public files. Private profile, credentials and full source cache are excluded. Commits use a transparent AI-agent identity.
+- [x] Publish the authorized runnable public repository and original Git history; independently verify its source and planning documents without login. See the sharing record in `spec.md`.
+- [ ] Complete genuine personal survey and learning reflections. At the participant's explicit request, AI drafted the name "Source Evidence Card", pitch and factual project story, and these were saved to an online draft with AI assistance disclosed. Do not label AI copy participant-original or invent personal learning facts.
+- [ ] Finish the independent media-access check. A new 78.80-second real-operation demo is publicly published and Studio displays 1:19, meeting the overview's 1–3 minutes and the rules' less-than-three-minute description. Signed-out title access works, but the platform's anti-bot wall prevented media playback verification. No participant narration is supplied or claimed.
 - [ ] Confirm actual team/account state and remaining eligibility/form requirements without treating registration as team completion.
 - [ ] Verify all required assets before an explicitly authorized formal submission; do not claim submission from preparation alone.
 
 ## Revisions
 
 - 2026-10-25: Updated implementation details from a proposed outside-repository cache and lexical ranking to the actual ignored `.cache/` directory and source-capability/intent rules. Split mechanical implementation/test evidence from browser checks, participant checkpoints and commits. Recorded 26 automated tests without treating them as participant learning, broad accuracy, approved plans or finished slices.
-- Local checkpoints use a transparent AI-agent commit identity; they do not credit participants with unverified work. Public repository/video links and formal submission remain pending.
+- Local checkpoints use a transparent AI-agent commit identity; they do not credit participants with unverified work. Later publication facts are recorded below; formal submission remains pending.
 
 
 - 2026-10-25 post-review: fixed unsupported action/location/eligibility claims, invalid cache metadata structures, and request/result mismatch. Reverified 40 automated tests and the actual browser journey. The initial 26-test record is superseded for the current revision.
@@ -94,3 +94,5 @@ Activity mode: to be recorded from actual interaction.
 - 2026-10-25 final mechanical record: 34 tests passed after clarifying single-question rejection reasons. Actual source-link click opened the official article and its body contained the exact quote; scroll position changed. Highlight appearance is not claimed. A silent technical video was recorded; participant narration and public video link remain pending.
 
 - 2026-10-25 English-material revision: added two exact-SHA-bound English display translations, independently checked against their actual Chinese passages. Six new tests verify exact binding and independence from evidence decisions. Current suite: 40 tests; actual browser renders marked translations at desktop/mobile widths. This is technical translation work, not entrant-written submission text.
+
+- 2026-10-25 publication follow-up: authorized public source/history and a short technical clip were published. Independent signed-out source access passed; YouTube's anti-bot wall prevented signed-out media playback verification. After participant login and site verification, an online draft and the exact form fields were observed. AI-assisted copy and technical links were saved under explicit delegation; real survey responses and final eligibility/terms remain incomplete. A new 78.80-second recording now addresses the overview's one-minute lower bound. No participant trial, learning completion or final submission is inferred.

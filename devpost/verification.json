@@ -2,8 +2,8 @@
   "checked_on": "2026-10-25",
   "automated_suite": {
     "command": "python -X utf8 -m unittest discover -s tests -v",
-    "total": 34,
-    "passed": 34,
+    "total": 40,
+    "passed": 40,
     "skipped": 0,
     "real_source_snapshot_used": true,
     "note": "Optional real-source test requires EVIDENCE_TEST_SNAPSHOT; without a local snapshot it is skipped."
@@ -100,6 +100,17 @@
     "method": "single-file loopback preview of the unchanged standalone HTML; file-protocol navigation was blocked by browser tooling",
     "console": "temporary preview favicon request 404 only; no map scripts or external assets",
     "participant_tour": false,
-    "source_code_commit": "d90495b8bd6f4ffbb1c9e3bf5d117b6905e03bf8"
-  }
+    "source_code_commit": "e857a7a7a92413ede2bf5266711d3caa9eceadb5"
+  },
+  "display_translations": {
+    "passage_count": 2,
+    "exact_sha256_binding": true,
+    "unknown_or_changed_passage_has_no_translation": true,
+    "support_decision_independent_of_translation": true,
+    "six_translation_tests_passed": true,
+    "independent_translation_review": "passed after narrowing recognition-document wording; both source paragraphs and hashes compared",
+    "not_official": true,
+    "not_participant_submission_copy": true
+  },
+  "public_candidate_revision": "Added two hash-bound English display translations after initial 42-file audit. New files contain only display annotations, hashes, tests and provenance; no private data or full source snapshot."
 }

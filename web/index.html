@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A small local prototype for finding original evidence in one public guide.">
+  <title>Document evidence search</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <main>
+    <header class="page-header">
+      <a class="wordmark" href="/" aria-label="Document evidence search home"><span class="mark" aria-hidden="true">[ ]</span> DOCUMENT / EVIDENCE</a>
+      <span class="prototype-label">LOCAL PROTOTYPE</span>
+    </header>
+    <section class="introduction" aria-labelledby="page-title">
+      <p class="eyebrow">ONE GUIDE. TRACEABLE WORDS.</p>
+      <h1 id="page-title">Find the passage.<br><span>Keep the limits.</span></h1>
+      <p class="intro-copy">Ask a procedural question about one official guide. Read the original evidence, check its source, and see when the document cannot support a conclusion.</p>
+    </section>
+    <div class="workspace">
+      <aside class="source-panel" aria-labelledby="source-heading">
+        <p class="eyebrow">THE DOCUMENT BEING CHECKED</p>
+        <h2 id="source-heading" lang="zh-CN">跨省异地就医如何直接报销？</h2>
+        <dl class="source-details">
+          <div><dt>Publisher</dt><dd id="source-publisher">Loading verified source…</dd></div>
+          <div><dt>Published</dt><dd id="source-published">—</dd></div>
+          <div><dt>Retrieved</dt><dd id="source-retrieved">—</dd></div>
+          <div><dt>Snapshot</dt><dd id="source-cache">—</dd></div>
+        </dl>
+        <a class="source-link" id="source-link" href="https://www.nhsa.gov.cn/art/2025/3/16/art_14_16010.html" target="_blank" rel="noopener noreferrer">Read the official guide <span aria-hidden="true">↗</span></a>
+        <details class="method-note"><summary>What this prototype covers</summary><p>A small, transparent set of English and Chinese procedural topics. Original evidence stays in Chinese. This guide cannot determine your personal reimbursement, eligibility or approval time.</p><p>Questions stay on this computer. No model service or account is used.</p></details>
+        <p class="source-status" id="source-status" role="status">Checking document provenance…</p>
+      </aside>
+      <section class="search-panel" aria-labelledby="question-heading">
+        <div class="section-heading"><span class="step-label">01 / QUESTION</span><span class="language-label">EN / 中文</span></div>
+        <h2 id="question-heading">What does this guide say?</h2>
+        <form id="search-form">
+          <label for="question">Your question</label>
+          <textarea id="question" name="question" rows="3" maxlength="500" placeholder="Where can I check my filing progress?" aria-describedby="question-help" required></textarea>
+          <div class="form-footer"><span id="question-help">Enter to search · Shift+Enter for a new line</span><button id="search-button" type="submit">Find evidence <span aria-hidden="true">→</span></button></div>
+        </form>
+        <div class="example-row" aria-label="Example questions">
+          <span class="example-caption">Try a question</span>
+          <button type="button" class="example" data-question="Where can I check my filing progress?">Find a procedure</button>
+          <button type="button" class="example" data-question="Can every region accept a personal commitment without supporting materials?">Check a broad claim</button>
+          <button type="button" class="example" data-question="What percentage of my hospital bill will be reimbursed?">Ask for a personal rate</button>
+        </div>
+        <div id="request-error" class="request-error" role="alert" hidden></div>
+        <section id="results" class="results" aria-live="polite" aria-busy="false">
+          <div class="initial-state" id="initial-state"><span class="step-label">02 / EVIDENCE</span><p>The result will keep the original wording, section and source together.</p></div>
+        </section>
+      </section>
+    </div>
+    <footer class="page-footer"><span>Original evidence first.</span><span>One 2025 guide · bounded retrieval · no personal policy decisions</span></footer>
+  </main>
+</body>
+</html>

@@ -1,0 +1,103 @@
+{
+  "artifact_type": "AI-reviewed source reference cases; NOT application test results",
+  "source_id": "nhsa-20250316-16010",
+  "source_snapshot_sha256": "f584f02914efae9ba3761fc9afb21e89ada7e391f77881c5c3141aa12098504a",
+  "label_meaning": {
+    "supported": "This specific guide supports the narrow document question.",
+    "conditional": "Relevant source requires explicit limits; it does not decide personal eligibility.",
+    "insufficient": "No sufficient basis for the requested conclusion in this guide, even when related text exists."
+  },
+  "application_executed": false,
+  "participant_reviewed": false,
+  "retrieval_accuracy_measured": false,
+  "cases": [
+    {
+      "id": "R01",
+      "question": "首次申请从哪里进入，需要实名吗？",
+      "expected_source_status": "supported",
+      "internal_paragraph_indices": [
+        7
+      ],
+      "locator": "第二部分 > 第一步：开始备案",
+      "reason": "The guide describes an entry route and identity verification.",
+      "must_not_infer": "Do not invent other login routes or current interface changes."
+    },
+    {
+      "id": "R02",
+      "question": "申请提交后在哪里看办理进度？",
+      "expected_source_status": "supported",
+      "internal_paragraph_indices": [
+        15
+      ],
+      "locator": "第二部分 > 第四步：查看备案进度",
+      "reason": "The progress-viewing entry is explicitly described.",
+      "must_not_infer": "Viewing progress is not evidence of approval."
+    },
+    {
+      "id": "R03",
+      "question": "页面默认的参保地能调整吗？",
+      "expected_source_status": "supported",
+      "internal_paragraph_indices": [
+        9
+      ],
+      "locator": "第二部分 > 第二步：选择备案类型",
+      "reason": "The guide allows adjustment according to actual circumstances.",
+      "must_not_infer": "Do not claim insurance enrollment has been transferred."
+    },
+    {
+      "id": "R04",
+      "question": "交不出认定材料，可以改用个人承诺申请吗？",
+      "expected_source_status": "conditional",
+      "internal_paragraph_indices": [
+        13
+      ],
+      "locator": "第二部分 > 第三步：提交备案材料",
+      "reason": "Only some regions and eligible people unable to submit recognition materials are described.",
+      "must_not_infer": "Preserve all three limits; applying does not mean approval."
+    },
+    {
+      "id": "R05",
+      "question": "全国任何地区都能只签承诺书、不交认定材料吗？",
+      "expected_source_status": "insufficient",
+      "internal_paragraph_indices": [
+        13
+      ],
+      "locator": "第二部分 > 第三步：提交备案材料",
+      "reason": "A limited regional route cannot support a nationwide guarantee.",
+      "must_not_infer": "A relevant paragraph alone is not sufficient support for the requested conclusion."
+    },
+    {
+      "id": "R06",
+      "question": "我这次住院具体能报销百分之多少？",
+      "expected_source_status": "insufficient",
+      "internal_paragraph_indices": [],
+      "locator": "全文",
+      "reason": "The guide provides no personal reimbursement rate or calculation inputs.",
+      "must_not_infer": "Do not infer a percentage from a reimbursement-related title."
+    },
+    {
+      "id": "R07",
+      "question": "今天提交备案，今天一定审批通过吗？",
+      "expected_source_status": "insufficient",
+      "internal_paragraph_indices": [
+        12,
+        15
+      ],
+      "locator": "第二部分 > 第三步、第四步",
+      "reason": "Submission and progress lookup do not establish a processing deadline.",
+      "must_not_infer": "Real-time progress lookup does not mean immediate approval."
+    },
+    {
+      "id": "R08",
+      "question": "替父母代办必须准备身份证、户口本还是委托书？",
+      "expected_source_status": "insufficient",
+      "internal_paragraph_indices": [
+        12,
+        13
+      ],
+      "locator": "第二部分 > 第三步：提交备案材料",
+      "reason": "The guide does not define proxy permissions or a proxy-material list.",
+      "must_not_infer": "Contact information is not proof of proxy authorization."
+    }
+  ]
+}

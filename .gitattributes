@@ -1,0 +1,2 @@
+# Preserve the vendored toolkit's exact pinned bytes.
+/.agents/** -text

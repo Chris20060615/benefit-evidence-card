@@ -1,0 +1,35 @@
+{
+  "artifact_type": "static citation-locator feasibility check; not a verified browser feature or application test",
+  "source_id": "nhsa-20250316-16010",
+  "source_snapshot_sha256": "f584f02914efae9ba3761fc9afb21e89ada7e391f77881c5c3141aa12098504a",
+  "checked_on": "2026-10-25",
+  "excerpt_reference": "catalog.json > short_excerpt",
+  "exact_excerpt_occurrences_in_snapshot": 1,
+  "encoding_round_trip_exact": true,
+  "fragment_url_candidate": "https://www.nhsa.gov.cn/art/2025/3/16/art_14_16010.html#:~:text=%E7%82%B9%E5%87%BB%E9%A6%96%E9%A1%B5%E3%80%90%E5%A4%87%E6%A1%88%E8%AE%B0%E5%BD%95%E3%80%91%E6%8C%89%E9%92%AE",
+  "fragment_with_article_anchor_candidate": "https://www.nhsa.gov.cn/art/2025/3/16/art_14_16010.html#zoom:~:text=%E7%82%B9%E5%87%BB%E9%A6%96%E9%A1%B5%E3%80%90%E5%A4%87%E6%A1%88%E8%AE%B0%E5%BD%95%E3%80%91%E6%8C%89%E9%92%AE",
+  "fallback_article_anchor": {
+    "id": "zoom",
+    "element": "div",
+    "unique_in_snapshot": true,
+    "contains_excerpt_in_parsed_ancestry": true,
+    "live_scroll_verified": false
+  },
+  "browser_check": {
+    "status": "not performed; browser tool failed before page navigation",
+    "attempts": 2,
+    "runtime_reset_attempted": true,
+    "failure_summary": "browser-control runtime could not initialize required local assets",
+    "highlight_or_scroll_verified": false,
+    "retry_condition": "browser-control service is restored or another specifically authorized browser-testing surface becomes available"
+  },
+  "documented_requirements": [
+    "Use user-initiated top-level navigation; text-fragment navigation does not work inside an iframe.",
+    "Use noopener for a cross-origin new tab.",
+    "Keep the normal source URL, human-readable section locator, and find-in-page phrase available.",
+    "Treat highlighting as optional; unsupported browsers or changed page text may ignore the directive.",
+    "Do not include participant questions, private context or personal medical information in a citation fragment."
+  ],
+  "technical_reference": "https://developer.mozilla.org/en-US/docs/Web/URI/Reference/Fragment/Text_fragments",
+  "conclusion": "Exact excerpt and article-anchor structure are verified against one downloaded source. Live scroll/highlight behavior is still unverified and must not be advertised as working."
+}

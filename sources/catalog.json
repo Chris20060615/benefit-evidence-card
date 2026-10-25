@@ -1,0 +1,26 @@
+{
+  "artifact_type": "candidate source metadata; not a runnable corpus or approved product requirement",
+  "source_id": "nhsa-20250316-16010",
+  "title": "跨省异地就医如何直接报销？",
+  "publisher": "国家医疗保障局",
+  "published_date": "2025-03-16",
+  "published_time_in_page_metadata": "2025-03-16 09:12",
+  "url": "https://www.nhsa.gov.cn/art/2025/3/16/art_14_16010.html",
+  "retrieved_at": "2026-10-25T12:11:43+08:00",
+  "snapshot_sha256": "f584f02914efae9ba3761fc9afb21e89ada7e391f77881c5c3141aa12098504a",
+  "snapshot_scope": "downloaded response bytes; current page may change later",
+  "short_excerpt": "点击首页【备案记录】按钮",
+  "excerpt_locator": "二、如何办理跨省异地就医备案 > 第四步：查看备案进度",
+  "short_excerpt_exact_in_raw_source": true,
+  "rights": {
+    "explicit_reuse_license_established": false,
+    "distribution": "metadata and one short attributed excerpt only; complete page and paragraphs remain in work",
+    "code_license_applies_to_source_text": false
+  },
+  "review": {
+    "method": "official web full-text reading, downloaded-source metadata and paragraph checks, independent AI review",
+    "participant_professional_validation": false,
+    "approved_as_final_dataset": false,
+    "does_not_establish": "current app interface, personal eligibility, treatment amount, or approval outcome"
+  }
+}

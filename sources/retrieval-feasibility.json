@@ -1,0 +1,122 @@
+{
+  "artifact_type": "single bounded development experiment; NOT application acceptance tests or a runnable prototype",
+  "source_snapshot_sha256": "f584f02914efae9ba3761fc9afb21e89ada7e391f77881c5c3141aa12098504a",
+  "config_frozen_for_this_run": {
+    "method": "Chinese character bigram weighted overlap, normalized by query weights",
+    "paragraph_indices": [
+      0,
+      1,
+      3,
+      4,
+      7,
+      9,
+      11,
+      12,
+      13,
+      15,
+      17,
+      18
+    ],
+    "candidate_display_threshold": 0.1,
+    "answerability_guard": "absent on purpose to inspect the risk of confusing text overlap with support",
+    "label_use": "reference labels are used only after retrieval for comparison; never passed to ranker",
+    "threshold_tuning_runs": 0
+  },
+  "evaluation_scope": "8 AI-reviewed development reference questions, not an unseen user study or benchmark",
+  "case_count": 8,
+  "insufficient_cases_shown_as_candidates": 2,
+  "insufficient_case_count": 4,
+  "supported_top_paragraph_matches": 2,
+  "supported_case_count": 3,
+  "results": [
+    {
+      "case_id": "R01",
+      "question": "首次申请从哪里进入，需要实名吗？",
+      "expected_source_status": "supported",
+      "top_internal_paragraph_index": 7,
+      "query_weighted_overlap": 0.161031,
+      "baseline_would_show_candidate": true,
+      "expected_paragraph_is_top": true,
+      "unsafe_if_candidate_is_treated_as_answer": false,
+      "conditions_still_require_separate_preservation": false
+    },
+    {
+      "case_id": "R02",
+      "question": "申请提交后在哪里看办理进度？",
+      "expected_source_status": "supported",
+      "top_internal_paragraph_index": 13,
+      "query_weighted_overlap": 0.154155,
+      "baseline_would_show_candidate": true,
+      "expected_paragraph_is_top": false,
+      "unsafe_if_candidate_is_treated_as_answer": false,
+      "conditions_still_require_separate_preservation": false
+    },
+    {
+      "case_id": "R03",
+      "question": "页面默认的参保地能调整吗？",
+      "expected_source_status": "supported",
+      "top_internal_paragraph_index": 9,
+      "query_weighted_overlap": 0.366529,
+      "baseline_would_show_candidate": true,
+      "expected_paragraph_is_top": true,
+      "unsafe_if_candidate_is_treated_as_answer": false,
+      "conditions_still_require_separate_preservation": false
+    },
+    {
+      "case_id": "R04",
+      "question": "交不出认定材料，可以改用个人承诺申请吗？",
+      "expected_source_status": "conditional",
+      "top_internal_paragraph_index": 13,
+      "query_weighted_overlap": 0.399678,
+      "baseline_would_show_candidate": true,
+      "expected_paragraph_is_top": true,
+      "unsafe_if_candidate_is_treated_as_answer": false,
+      "conditions_still_require_separate_preservation": true
+    },
+    {
+      "case_id": "R05",
+      "question": "全国任何地区都能只签承诺书、不交认定材料吗？",
+      "expected_source_status": "insufficient",
+      "top_internal_paragraph_index": 13,
+      "query_weighted_overlap": 0.320123,
+      "baseline_would_show_candidate": true,
+      "expected_paragraph_is_top": true,
+      "unsafe_if_candidate_is_treated_as_answer": true,
+      "conditions_still_require_separate_preservation": false
+    },
+    {
+      "case_id": "R06",
+      "question": "我这次住院具体能报销百分之多少？",
+      "expected_source_status": "insufficient",
+      "top_internal_paragraph_index": 0,
+      "query_weighted_overlap": 0.0,
+      "baseline_would_show_candidate": false,
+      "expected_paragraph_is_top": null,
+      "unsafe_if_candidate_is_treated_as_answer": false,
+      "conditions_still_require_separate_preservation": false
+    },
+    {
+      "case_id": "R07",
+      "question": "今天提交备案，今天一定审批通过吗？",
+      "expected_source_status": "insufficient",
+      "top_internal_paragraph_index": 13,
+      "query_weighted_overlap": 0.208142,
+      "baseline_would_show_candidate": true,
+      "expected_paragraph_is_top": false,
+      "unsafe_if_candidate_is_treated_as_answer": true,
+      "conditions_still_require_separate_preservation": false
+    },
+    {
+      "case_id": "R08",
+      "question": "替父母代办必须准备身份证、户口本还是委托书？",
+      "expected_source_status": "insufficient",
+      "top_internal_paragraph_index": 0,
+      "query_weighted_overlap": 0.0,
+      "baseline_would_show_candidate": false,
+      "expected_paragraph_is_top": false,
+      "unsafe_if_candidate_is_treated_as_answer": false,
+      "conditions_still_require_separate_preservation": false
+    }
+  ],
+  "interpretation": "Ranking relevance alone does not establish that a passage answers a requested conclusion. No shipping readiness or general accuracy is inferred."
+}

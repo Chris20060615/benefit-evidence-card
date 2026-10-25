@@ -1,0 +1,90 @@
+{
+  "checked_on": "2026-10-25",
+  "automated_suite": {
+    "command": "python -X utf8 -m unittest discover -s tests -v",
+    "total": 33,
+    "passed": 33,
+    "skipped": 0,
+    "real_source_snapshot_used": true,
+    "note": "Optional real-source test requires EVIDENCE_TEST_SNAPSHOT; without a local snapshot it is skipped."
+  },
+  "javascript_syntax": "node --check web/app.js passed",
+  "browser": {
+    "browser": "Microsoft Edge via Playwright CLI",
+    "outcomes": [
+      {
+        "question": "Where can I check my filing progress?",
+        "status": "supported",
+        "visibleLabel": "Original evidence located"
+      },
+      {
+        "question": "What conditions apply to the personal undertaking route?",
+        "status": "conditional",
+        "visibleLabel": "Evidence with conditions"
+      },
+      {
+        "question": "What percentage of my hospital bill will be reimbursed?",
+        "status": "insufficient",
+        "visibleLabel": "Insufficient evidence"
+      },
+      {
+        "question": "Can every region accept a personal commitment without supporting materials?",
+        "status": "insufficient",
+        "visibleLabel": "Insufficient evidence"
+      },
+      {
+        "question": "How do I delete my filing records?",
+        "status": "insufficient",
+        "visibleLabel": "Insufficient evidence"
+      },
+      {
+        "question": "How do I cancel a personal undertaking?",
+        "status": "insufficient",
+        "visibleLabel": "Insufficient evidence"
+      },
+      {
+        "question": "北京支持个人承诺吗？",
+        "status": "insufficient",
+        "visibleLabel": "Insufficient evidence"
+      },
+      {
+        "question": "在哪里看备案进度就能确认我的资格？",
+        "status": "insufficient",
+        "visibleLabel": "Insufficient evidence"
+      },
+      {
+        "question": "<img src=x onerror=alert(1)>",
+        "status": "insufficient",
+        "visibleLabel": "Insufficient evidence"
+      },
+      {
+        "question": "这篇指南中，在哪里查看备案进度？",
+        "status": "supported",
+        "visibleLabel": "Original evidence located"
+      }
+    ],
+    "exampleEquivalent": true,
+    "inFlightControlsAndQuestionEcho": true,
+    "keyboard": true,
+    "htmlInjectionRejected": true,
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "horizontalOverflow": false
+    },
+    "browserErrors": [],
+    "scope": "Mechanical browser checks by AI; not participant trial or general accuracy."
+  },
+  "review_fixes": [
+    "Unsupported record deletion, undertaking withdrawal, locality-specific claims and personal eligibility conclusions now abstain; positive procedural facets are bounded.",
+    "Malformed cache manifest JSON structures now raise SourceUnavailable instead of crashing startup.",
+    "In-flight questions are read-only, examples disabled and actual checked question echoed beside the result."
+  ],
+  "limits": [
+    "Finite rule coverage, not a general language model or validated accuracy benchmark.",
+    "Mechanical checks by AI do not establish participant trial, learning, approval or clinical/policy expertise.",
+    "The current guide is dated 2025-03-16; retrieval does not verify current personal benefits."
+  ],
+  "participant_trial": false,
+  "formal_submission": false
+}
